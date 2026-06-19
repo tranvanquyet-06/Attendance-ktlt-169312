@@ -1,0 +1,5 @@
+KTLT01,Ky thuat lap trinh,Thu 2,1,3,B301,15
+MMT01,Mang may tinh,Thu 3,4,3,B402,15
+CSDL01,Co so du lieu,Thu 5,7,3,A205,15
+TRR01,Tri tue nhan tao,Thu 6,1,3,C103,15
+ktlt, dsa,thu 3,6,6,d3,30
