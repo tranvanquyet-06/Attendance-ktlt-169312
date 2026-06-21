@@ -5,9 +5,9 @@
 using namespace std;
 
 struct SinhVien {
-string maSV;
-  string hoTen;
- string maLop;
+    string maSV;
+    string hoTen;
+    string maLop;
 };
 
 #endif

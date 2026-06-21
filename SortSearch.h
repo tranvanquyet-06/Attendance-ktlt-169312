@@ -5,19 +5,19 @@
 
 template <typename T>
 void bubbleSort(DynamicArray<T>& arr, bool (*compare)(const T&, const T&)) {
-  int n = arr.size();
-  for (int i=0; i<n-1; i++) {
-      bool swapped = false;
-      for (int j=0; j<n-i-1; j++) {
-           if (compare(arr[j+1], arr[j])) {
-               T temp = arr[j];
-                arr[j] = arr[j+1];
-              arr[j+1] = temp;
-               swapped = true;
-           }
+    int n = arr.size();
+    for (int i = 0; i < n - 1; i++) {
+        bool swapped = false;
+        for (int j = 0; j < n - i - 1; j++) {
+            if (compare(arr[j + 1], arr[j])) {
+                T temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swapped = true;
+            }
         }
-     if (!swapped) break;
-  }
+        if (!swapped) break;
+    }
 }
 
 template <typename T>
@@ -45,7 +45,7 @@ int linearSearch(const DynamicArray<T>& arr, const K& key,
 
 template <typename T, typename K>
 DynamicArray<int> linearSearchAll(const DynamicArray<T>& arr, const K& key,
-                                   bool (*match)(const T&, const K&)) {
+                                  bool (*match)(const T&, const K&)) {
     DynamicArray<int> results;
     for (int i = 0; i < arr.size(); i++) {
         if (match(arr[i], key)) {

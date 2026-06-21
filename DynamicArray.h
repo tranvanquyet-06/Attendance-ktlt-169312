@@ -54,20 +54,20 @@ public:
         delete[] data;
     }
 
-   void push_back(const T& item) {
-       if (_size >= _capacity) {
- int newCap = (_capacity == 0) ? 4 : _capacity * 2;
-           expand(newCap);
+    void push_back(const T& item) {
+        if (_size >= _capacity) {
+            int newCap = (_capacity == 0) ? 4 : _capacity * 2;
+            expand(newCap);
         }
         data[_size++] = item;
- }
+    }
 
-  void removeAt(int index) {
-      if (index < 0 || index >= _size) return;
-        for (int i=index; i<_size-1; i++) {
-         data[i] = data[i+1];
-     }
-      _size--;
+    void removeAt(int index) {
+        if (index < 0 || index >= _size) return;
+        for (int i = index; i < _size - 1; i++) {
+            data[i] = data[i + 1];
+        }
+        _size--;
     }
 
     T& operator[](int index) {

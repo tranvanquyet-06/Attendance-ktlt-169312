@@ -5,13 +5,13 @@
 using namespace std;
 
 struct LopHoc {
- string maLop;
-   string tenLop;
- string thu;
- int tietBatDau;
-  int soTiet;
- string phong;
-  int tongSoBuoi;
+    string maLop;
+    string tenLop;
+    string thu;
+    int tietBatDau;
+    int soTiet;
+    string phong;
+    int tongSoBuoi;
 };
 
 #endif

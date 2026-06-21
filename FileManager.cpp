@@ -8,12 +8,11 @@ using namespace std;
 DynamicArray<string> FileManager::split(const string& s, char delimiter) {
     DynamicArray<string> tokens;
     string token = "";
-    for (int i=0; i<s.length(); i++) {
+    for (int i = 0; i < (int)s.length(); i++) {
         if (s[i] == delimiter) {
             tokens.push_back(token);
             token = "";
-        } 
-        else {
+        } else {
             token += s[i];
         }
     }
@@ -26,15 +25,14 @@ DynamicArray<string> FileManager::split(const string& s, char delimiter) {
 string FileManager::trim(const string& s) {
     if (s.empty()) return s;
     int start = 0, end = s.length() - 1;
-    
-    while(start <= end && (s[start] == ' ' || s[start] == '\t' || s[start] == '\r' || s[start] == '\n'))
+
+    while (start <= end && (s[start] == ' ' || s[start] == '\t' || s[start] == '\r' || s[start] == '\n'))
         start++;
-        
-    while(end >= start && (s[end] == ' ' || s[end] == '\t' || s[end] == '\r' || s[end] == '\n'))
+
+    while (end >= start && (s[end] == ' ' || s[end] == '\t' || s[end] == '\r' || s[end] == '\n'))
         end--;
-        
+
     if (start > end) return "";
-    
     return s.substr(start, end - start + 1);
 }
 
@@ -51,13 +49,13 @@ void FileManager::docLopHoc(const string& filename, DynamicArray<LopHoc>& ds) {
         DynamicArray<string> parts = split(line, ',');
         if (parts.size() >= 7) {
             LopHoc lh;
-            lh.maLop       = trim(parts[0]);
-            lh.tenLop      = trim(parts[1]);
-            lh.thu         = trim(parts[2]);
-            lh.tietBatDau  = atoi(trim(parts[3]).c_str());
-            lh.soTiet      = atoi(trim(parts[4]).c_str());
-            lh.phong       = trim(parts[5]);
-            lh.tongSoBuoi  = atoi(trim(parts[6]).c_str());
+            lh.maLop      = trim(parts[0]);
+            lh.tenLop     = trim(parts[1]);
+            lh.thu        = trim(parts[2]);
+            lh.tietBatDau = atoi(trim(parts[3]).c_str());
+            lh.soTiet     = atoi(trim(parts[4]).c_str());
+            lh.phong      = trim(parts[5]);
+            lh.tongSoBuoi = atoi(trim(parts[6]).c_str());
             ds.push_back(lh);
         }
     }
@@ -95,9 +93,9 @@ void FileManager::docSinhVien(const string& filename, DynamicArray<SinhVien>& ds
         DynamicArray<string> parts = split(line, ',');
         if (parts.size() >= 3) {
             SinhVien sv;
-            sv.maSV   = trim(parts[0]);
-            sv.hoTen  = trim(parts[1]);
-            sv.maLop  = trim(parts[2]);
+            sv.maSV  = trim(parts[0]);
+            sv.hoTen = trim(parts[1]);
+            sv.maLop = trim(parts[2]);
             ds.push_back(sv);
         }
     }
@@ -131,10 +129,10 @@ void FileManager::docDiemDanh(const string& filename, DynamicArray<DiemDanh>& ds
         DynamicArray<string> parts = split(line, ',');
         if (parts.size() >= 4) {
             DiemDanh dd;
-            dd.maLop      = trim(parts[0]);
-            dd.maSV       = trim(parts[1]);
-            dd.ngay       = trim(parts[2]);
-            dd.trangThai  = atoi(trim(parts[3]).c_str());
+            dd.maLop     = trim(parts[0]);
+            dd.maSV      = trim(parts[1]);
+            dd.ngay      = trim(parts[2]);
+            dd.trangThai = atoi(trim(parts[3]).c_str());
             ds.push_back(dd);
         }
     }

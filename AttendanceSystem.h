@@ -13,53 +13,53 @@ using namespace std;
 
 class HeThongDiemDanh {
 private:
-DynamicArray<LopHoc> dsLopHoc;
+  DynamicArray<LopHoc> dsLopHoc;
   DynamicArray<SinhVien> dsSinhVien;
-    DynamicArray<DiemDanh> dsDiemDanh;
+  DynamicArray<DiemDanh> dsDiemDanh;
 
-   string fileLopHoc;
- string fileSinhVien;
- string fileDiemDanh;
+  string fileLopHoc;
+  string fileSinhVien;
+  string fileDiemDanh;
 
- int timLopHoc(const string &maLop);
+  int timLopHoc(const string &maLop);
   int timSinhVien(const string &maSV);
- DynamicArray<int> laySVTheoLop(const string &maLop);
-    DynamicArray<string> layNgayDiemDanh(const string &maLop);
- bool daTonTai(const DynamicArray<string> &ds, const string &val);
-   void luuTatCa();
- void docTatCa();
+  DynamicArray<int> laySVTheoLop(const string &maLop);
+  DynamicArray<string> layNgayDiemDanh(const string &maLop);
+  bool daTonTai(const DynamicArray<string> &ds, const string &val);
+  void luuTatCa();
+  void docTatCa();
 
- void veDuongKe(int doDai);
+  void veDuongKe(int doDai);
   void hienThiTieuDe(const string &tieuDe);
 
 public:
- HeThongDiemDanh();
+  HeThongDiemDanh();
 
- void menuQuanLyLop();
- void menuQuanLySV();
+  void menuQuanLyLop();
+  void menuQuanLySV();
   void menuDiemDanh();
- void menuTimKiem();
- void menuBaoCao();
+  void menuTimKiem();
+  void menuBaoCao();
 
- void themLopHoc();
- void suaLopHoc();
- void xoaLopHoc();
- void hienThiDanhSachLop();
+  void themLopHoc();
+  void suaLopHoc();
+  void xoaLopHoc();
+  void hienThiDanhSachLop();
 
- void themSinhVien();
- void suaSinhVien();
- void xoaSinhVien();
- void hienThiDanhSachSV();
+  void themSinhVien();
+  void suaSinhVien();
+  void xoaSinhVien();
+  void hienThiDanhSachSV();
 
   void diemDanhTheoLop();
- void suaDiemDanh();
+  void suaDiemDanh();
 
- void timKiemTheoNgay();
- void timKiemTheoMaSV();
+  void timKiemTheoNgay();
+  void timKiemTheoMaSV();
 
   void tinhTyLeVang();
- void canhBaoCamThi();
- void thongKeSiSo();
+  void canhBaoCamThi();
+  void thongKeSiSo();
   void danhSachVangNhieuNhat();
 };
 
